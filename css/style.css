@@ -1,0 +1,16 @@
+.leftpart {
+  background-color: #4AEBDC;
+  height: 100vh;
+}
+
+.leftpart img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.rightpart {
+  background-color: #63F7F9;
+  height: 100vh;
+}
