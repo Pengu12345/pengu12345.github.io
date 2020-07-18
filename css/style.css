@@ -1,16 +1,65 @@
+:root{
+  --bg-main: #ffe461;
+  --bg-clear: #ffe875;
+  --feather: #2084db;
+  --headphones:#757575;
+  --jacket1:#4df87b;
+  --jacket2:#00ad2e;
+  --scarf:#ff4949;
+  --bag:#b47f2f;
+  --beak:#eeff38;
+  --feet:#ffde38;
+}
+
+body {
+  background-color: var(--bg-clear);
+}
+
 .leftpart {
-  background-color: #4AEBDC;
+  background-color: var(--bg-clear);
+  height: 100vh;
+  overflow-y:scroll;
+}
+
+.middlepart {
+  background-color: var(--bg-main);
   height: 100vh;
 }
 
-.leftpart img {
+.rightpart {
+  background-color: var(--bg-clear);
+  height: 100vh;
+}
+
+.fit-in-div {
   max-width: 100%;
   max-height: 100%;
   margin: auto;
   display: block;
 }
 
-.rightpart {
-  background-color: #63F7F9;
-  height: 100vh;
+.thumbnail {
+  width:300px;
+  height: 300px;
+  display: block;
+}
+
+footer {
+  background-color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /*background: var(--feather);*/
+  background-color: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scarf);
 }
