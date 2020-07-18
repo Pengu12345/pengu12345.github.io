@@ -13,12 +13,12 @@
 
 body {
   background-color: var(--bg-clear);
+  overflow: hidden;
 }
 
 .leftpart {
   background-color: var(--bg-clear);
   height: 100vh;
-  overflow-y:scroll;
 }
 
 .middlepart {
@@ -29,6 +29,28 @@ body {
 .rightpart {
   background-color: var(--bg-clear);
   height: 100vh;
+  overflow-y: scroll;
+}
+
+.innerInfos {
+  border: 2px solid grey;
+  height: 660px;
+
+  /*background-color: var(--headphones);*/
+  overflow-y: scroll;
+}
+
+.leftTab {
+  border: 2px solid black;back
+  height:50px;
+}
+
+.tweets {
+  background-color: var(--jacket1);
+  border: 3px solid var(--jacket2);
+  height:500px;
+  display: block;
+  overflow-y: scroll;
 }
 
 .fit-in-div {
@@ -38,15 +60,15 @@ body {
   display: block;
 }
 
-.thumbnail {
-  width:300px;
-  height: 300px;
-  display: block;
-}
-
 footer {
   background-color: inherit;
+  height: 0px;
 }
+
+
+/*-----------*/
+/* SCROLLBAR */
+/*-----------*/
 
 /* width */
 ::-webkit-scrollbar {

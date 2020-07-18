@@ -1,16 +1,14 @@
 var listImg = ['dave-peng.png', 'snap-peng.jpg', 'fez-peng.png'];
 
-function outputImages(path) {
+function outputImages(path, col) {
 
   for(var i=0; i<listImg.length; i++) {
-    var img = '<img src="' + path + listImg[i] + '" class="materialboxed" width="200" /> \n';
+    var sNumber = 12/col;
+    var img = '<img src="' + path + listImg[i] + '" class=" col s' + sNumber + ' materialboxed centered" width="200" /> \n';
     document.write(img);
   }
 
 }
-
-var elem = document.querySelector('.tabs');
-var instance = M.Tabs.init(elem);
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.materialboxed');

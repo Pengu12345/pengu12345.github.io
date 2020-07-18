@@ -27,10 +27,19 @@
     <script type="text/javascript" src="js/util.js"></script>
     <navbar></navbar>
 
-    <div class="row">
+    <div class="row"> <!-- MAIN PAGE -->
 
-      <div class="col s4 leftpart">
-        <script> outputImages("/img/examples/"); </script>
+      <div class="col s4 leftpart"> <!-- Left -->
+        <div class="row">
+
+          <div class="col s12 leftTab">
+            Info
+          </div>
+          <div class=" col s12 innerInfos">
+            <script> outputImages("/img/examples/",2); </script>
+          </div>
+
+        </div>
       </div>
 
       <div class="col s4 middlepart">
@@ -38,13 +47,18 @@
       </div>
 
       <div class="col s4 rightpart">
+        <div class="row">
 
+          <div class="col s12 tweets">
+            <a class="twitter-timeline" href="https://twitter.com/Pengu1231?ref_src=twsrc%5Etfw">Tweets by Pengu1231</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+        </div>
       </div>
 
     </div>
 
   <footer>
-    (Zenon is a boomer)
   </footer>
   </body>
 </html>
