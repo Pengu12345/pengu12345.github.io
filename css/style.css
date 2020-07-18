@@ -22,7 +22,7 @@ html {
 
 body {
   /*background-color: var(--bg-clear);*/
-  /*overflow: hidden!important;*/
+  overflow: hidden!important;
 }
 
 .leftpart {
