@@ -1,3 +1,8 @@
+html {
+  background-image: url('/img/bg.png');
+  background-size: 100% 100%;
+}
+
 :root{
   --bg-main: #ffe461;
   --bg-clear: #ffe875;
@@ -10,14 +15,14 @@
   --beak:#eeff38;
   --feet:#ffde38;
 
-  --button:#2BADB2;
-  --buttonHover:#19569C;
-  --buttonBorder:#204F09;
+  --button:#105981;
+  --buttonHover:#ee8e58;
+  --buttonBorder:#0000002b;
 }
 
 body {
-  background-color: var(--bg-clear);
-  overflow: hidden;
+  /*background-color: var(--bg-clear);*/
+  /*overflow: hidden!important;*/
 }
 
 .leftpart {
@@ -29,12 +34,14 @@ body {
 
 .middlepart {
   height: 100vh;
+  border: 1px solid black;
 }
 
 .rightpart {
-  background-color: var(--bg-clear);
+  margin-left: 100px;
   height: 100vh;
   overflow-y: scroll;
+  border: 1px solid black;
 }
 
 .icon {
@@ -50,6 +57,11 @@ body {
   border-bottom: 5px solid var(--buttonBorder);
   box-shadow: none;
   transition: 0.2s;
+
+  font-family: 'Permanent Marker', cursive;
+  color:white;
+  text-shadow: #00000029 2px 3px 0px;
+  font-size: 20px;
 }
 
 .active {
@@ -79,7 +91,8 @@ body {
 	max-width: 30em;
 
   margin-top: 15px;
-  height: 100vh;
+  padding-top: 15px;
+  height: 650px;
 
 	background-color: #47C869;
 	padding: 1.125em 1.5em;
@@ -87,20 +100,8 @@ body {
 	border-radius: 1rem;
   border: 1px solid var(--jacket2);
   box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
-}
 
-.bubbleSpeech::before {
-  content: '';
-  position: absolute;
-  width: 0px;
-  height:0px;
-  bottom:100%;
-  left: 48%;
-  border:  .80rem solid transparent;
-  border-top: none;
-
-  border-bottom-color: #47C869;
-  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+  overflow-y: auto;
 }
 
 .tabContent {
@@ -112,12 +113,30 @@ body {
   border-radius: 15px;
 }
 
+.caption {
+  position:absolute;
+  margin-left: 300px;
+  margin-top: 40px;
+}
+
 .tweets {
   background-color: var(--jacket1);
   border: 3px solid var(--jacket2);
   height:500px;
-  display: block;
   overflow-y: scroll;
+}
+
+.colorList {
+  width: inherit;
+  height: inherit;
+}
+
+.colorChoice[colorType] {
+  background-color: attr(colorType color);
+  width:100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 2px solid black;
 }
 
 .fit-in-div {

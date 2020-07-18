@@ -40,4 +40,7 @@ function outputImages(path, col) {
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.materialboxed');
     var instances = M.Materialbox.init(elems);
+
+    var elemsT = document.querySelectorAll('.tooltipped');
+    var instancesT = M.Tooltip.init(elemsT);
 });
