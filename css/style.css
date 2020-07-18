@@ -9,6 +9,10 @@
   --bag:#b47f2f;
   --beak:#eeff38;
   --feet:#ffde38;
+
+  --button:#2BADB2;
+  --buttonHover:#19569C;
+  --buttonBorder:#204F09;
 }
 
 body {
@@ -17,12 +21,13 @@ body {
 }
 
 .leftpart {
-  background-color: var(--bg-clear);
+  background-color: #2B573E;
   height: 100vh;
+  box-shadow: -10px 0px 20px 8px rgba(0, 0, 0, 0.7);
+  margin-right: 3px;
 }
 
 .middlepart {
-  background-color: var(--bg-main);
   height: 100vh;
 }
 
@@ -32,17 +37,79 @@ body {
   overflow-y: scroll;
 }
 
-.innerInfos {
-  border: 2px solid grey;
-  height: 660px;
+.icon {
+  height: 50px;
+  width:  50px;
+}
 
-  /*background-color: var(--headphones);*/
+.leftChoices {
+  height: 50px;
+  margin: 5px 0px 5px 0px;
+  background-color:var(--button);
+  border-style: hidden;
+  border-bottom: 5px solid var(--buttonBorder);
+  box-shadow: none;
+  transition: 0.2s;
+}
+
+.active {
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.7);
+}
+
+.leftChoices:hover {
+    background-color:var(--buttonHover);
+}
+
+.leftChoices:focus {
+  transition: 0.2s;
+}
+
+.leftChoices:focus:hover {
+  transition: 0.2s;
+}
+
+
+.innerLeft {
+  padding-top: 10px;
   overflow-y: scroll;
 }
 
+.bubbleSpeech {
+	position: relative;
+	max-width: 30em;
+
+  margin-top: 15px;
+  height: 100vh;
+
+	background-color: #47C869;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 1rem;
+  border: 1px solid var(--jacket2);
+  box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+}
+
+.bubbleSpeech::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height:0px;
+  bottom:100%;
+  left: 48%;
+  border:  .80rem solid transparent;
+  border-top: none;
+
+  border-bottom-color: #47C869;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.tabContent {
+  visibility: visible;
+  transition: 1s;
+}
+
 .leftTab {
-  border: 2px solid black;back
-  height:50px;
+  border-radius: 15px;
 }
 
 .tweets {

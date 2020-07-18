@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" user-scalable="0" />
     <title> Pengu's website </title>
 
     <!--Import materialize css-->
@@ -33,25 +33,41 @@
         <div class="row">
 
           <div class="col s12 leftTab">
-            Info
+            <!--<button class="leftChoices col s6" onclick="openTab(event, 'Details');">  <img src="img/icon-details.png" class="icon"/></button>
+            <button class="leftChoices col s6" onclick="openTab(event, 'Gallery');" > <img src="img/icon-gallery.png" class="icon"/></button>-->
+
+            <button class="leftChoices col s6 active" onclick="openTab(event, 'Details');">Details</button>
+            <button class="leftChoices col s6" onclick="openTab(event, 'Gallery');" >Gallery</button>
           </div>
-          <div class=" col s12 innerInfos">
-            <script> outputImages("/img/examples/",2); </script>
+
+          <div class=" col s12 bubbleSpeech">
+            <div class="innerLeft">
+              <div id="Details" class="tabContent">
+                <img class="fit-in-div"
+
+                src="img/small-tail.png" alt="small tail" />
+              </div>
+
+              <div id="Gallery" class="tabContent" style="display:none;">
+                <script> outputImages("/img/examples/",2); </script>
+              </div>
+
+            </div>
           </div>
 
         </div>
       </div>
 
-      <div class="col s4 middlepart">
+      <div class="col s6 middlepart">
         <img src="img/examples/peng-peng.png" class="fit-in-div" />
       </div>
 
-      <div class="col s4 rightpart">
+      <div class="col s2 rightpart">
         <div class="row">
 
-          <div class="col s12 tweets">
+          <!--<div class="col s12 tweets">
             <a class="twitter-timeline" href="https://twitter.com/Pengu1231?ref_src=twsrc%5Etfw">Tweets by Pengu1231</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
+          </div>-->
 
         </div>
       </div>
@@ -60,5 +76,7 @@
 
   <footer>
   </footer>
+
+  <script>init();</script> <!--Initialize functions once all elements has been loaded -->
   </body>
 </html>
