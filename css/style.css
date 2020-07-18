@@ -34,14 +34,14 @@ body {
 
 .middlepart {
   height: 100vh;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .rightpart {
   margin-left: 100px;
   height: 100vh;
   overflow-y: scroll;
-  border: 1px solid black;
+/*  border: 1px solid black;*/
 }
 
 .icon {
@@ -127,16 +127,33 @@ body {
 }
 
 .colorList {
-  width: inherit;
-  height: inherit;
+  padding: 15px;
+  margin-top: 50px;
+  background-color: #3f300138;
+  box-shadow: -6px 7px 4px 1px rgba(125, 24, 2, 0.28)
 }
 
-.colorChoice[colorType] {
-  background-color: attr(colorType color);
-  width:100px;
-  height: 100px;
+.colorChoice {
+  width:70px;
+  height: 70px;
+  margin-bottom: 10px;
+  display: block;
   border-radius: 100px;
-  border: 2px solid black;
+  border: 5px solid #0000001c;
+
+  text-decoration: none;
+  color: transparent;
+  text-align: center;
+  padding-top: 15px;
+
+  box-shadow: -4px 2px 0px 1px rgba(0, 0, 0, 0.16);
+
+  transition: 0.5s;
+}
+
+.colorChoice:hover {
+  transition: 0.5s;
+  color:black;
 }
 
 .fit-in-div {
