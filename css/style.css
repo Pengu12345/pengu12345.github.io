@@ -22,14 +22,30 @@ html {
 
 body {
   /*background-color: var(--bg-clear);*/
-  overflow: hidden!important;
+}
+
+.note {
+  text-align: right;
+  color: black;
+  background-color: var(--headphones);
+  font-size: 15px;
+  font-style: italic;
+  font-family: cursive;
 }
 
 .leftpart {
-  background-color: #2B573E;
   height: 100vh;
-  box-shadow: -10px 0px 20px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.leftWindow {
+  display: inline-block;
+  background-color: #3f300138;
+  box-shadow: -6px 7px 4px 1px rgba(125, 24, 2, 0.28);
+  border: 8px ridge #A4A4A4;
   margin-right: 3px;
+
+  width: 100%;
 }
 
 .middlepart {
@@ -40,7 +56,7 @@ body {
 .rightpart {
   margin-left: 100px;
   height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden;
 /*  border: 1px solid black;*/
 }
 
@@ -89,16 +105,20 @@ body {
 .bubbleSpeech {
 	position: relative;
 
-  margin-top: 15px;
-  padding-top: 15px;
-  height: 100vh;
+  height: 580px;
 
-	background-color: #47C869;
+  margin-top: 5px;
+  padding-top: 15px;
+  display: block;
+
+  /*background-color: #47C869;
+  border: 1px solid var(--jacket2);
+  border-radius: 1rem;*/
+
 	padding: 1.125em 1.5em;
 	font-size: 1.25em;
-	border-radius: 1rem;
-  border: 1px solid var(--jacket2);
-  box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+
+  /*box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);*/
 
   overflow-y: auto;
 }
@@ -131,22 +151,41 @@ body {
   overflow-y: scroll;
 }
 
+.windowsCross {
+  width: 40px;
+  height: 40px;
+
+  float: right;
+}
+
+.windowsDetail {
+  margin-top: 5px;
+  background-color:#5442a4;
+  padding:0!important;
+
+  text-align: center;
+  font-size: 17px;
+  color:white;
+}
+
 .colorList {
-  padding: 15px;
-  margin-top: 50px;
   background-color: #3f300138;
-  box-shadow: -6px 7px 4px 1px rgba(125, 24, 2, 0.28)
+  box-shadow: -6px 7px 4px 1px rgba(125, 24, 2, 0.28);
+  border: 8px ridge #A4A4A4;
+
+  text-align: center;
 }
 
 .colorChoice {
   width:70px;
   height: 70px;
-  margin-bottom: 10px;
-  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 100px;
   border: 5px solid #0000001c;
 
   text-decoration: none;
+  display:inline-flex;
   color: transparent;
   text-align: center;
   padding-top: 15px;
@@ -192,4 +231,33 @@ footer {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--scarf);
+}
+
+
+
+@media (min-width:1900px) {
+  .colorChoice {
+    width: 100px;
+    height: 100px;
+    padding-top: 20%;
+    font-size: 20px;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .windowsCross {
+    width: 50px;
+    height: 50px;
+  }
+
+  .windowsDetail {
+    font-size: 25px;
+  }
+
+  .bubbleSpeech {
+    height: 800px;
+  }
 }
