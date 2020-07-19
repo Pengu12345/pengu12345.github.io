@@ -88,11 +88,10 @@ body {
 
 .bubbleSpeech {
 	position: relative;
-	max-width: 30em;
 
   margin-top: 15px;
   padding-top: 15px;
-  height: 650px;
+  height: 100vh;
 
 	background-color: #47C869;
 	padding: 1.125em 1.5em;
@@ -114,9 +113,15 @@ body {
 }
 
 .caption {
-  position:absolute;
+  position: absolute;
   margin-left: 300px;
   margin-top: 40px;
+  z-index: -1;
+}
+
+.picture {
+  display: block;
+  overflow: hidden;
 }
 
 .tweets {
