@@ -111,14 +111,9 @@ body {
   padding-top: 15px;
   display: block;
 
-  /*background-color: #47C869;
-  border: 1px solid var(--jacket2);
-  border-radius: 1rem;*/
-
 	padding: 1.125em 1.5em;
 	font-size: 1.25em;
 
-  /*box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);*/
 
   overflow-y: auto;
 }
@@ -134,7 +129,8 @@ body {
 
 .caption {
   position: absolute;
-  margin-left: 300px;
+  width:25%;
+  margin-left: 20%;
   margin-top: 40px;
   z-index: -1;
 }
@@ -260,4 +256,15 @@ footer {
   .bubbleSpeech {
     height: 800px;
   }
+}
+
+@media (max-width:1200px) {
+
+  .colorChoice {
+    border-width: 2px;
+    width: 40px;
+    height: 40px;
+    padding-top: 20%;
+    font-size: 9px;
+
 }
