@@ -4,6 +4,10 @@ function init() {
 
 }
 
+function tryCloseWindows() {
+   M.toast({html: '[SYSTEM MESSAGE]: Pengu\'s flippers not recognized. Can\'t close window.'});
+}
+
 function openTab(evt, tabId) {
   console.log("clicked on button " + evt + " to open " + tabId);
 

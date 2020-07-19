@@ -152,6 +152,7 @@ body {
   height: 40px;
 
   float: right;
+  cursor: pointer;
 }
 
 .windowsDetail {
