@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8" user-scalable="0" />
+    <title> Pengu's website </title>
+
+    <!--Import materialize css-->
+    <!--link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <navbar></navbar>
+
+    <div class="row"> <!-- MAIN PAGE -->
+
+      <div class="col s4 leftpart"> <!-- Left -->
+        <div class="row">
+          <div class="windowsDetail col s12">Informations <img class="windowsCross" src="img/cross.png" onclick="tryCloseWindows();"/></div>
+          <div class="leftWindow">
+            <div class="col s12 leftTab">
+                <!--<button class="leftChoices col s6" onclick="openTab(event, 'Details');">  <img src="img/icon-details.png" class="icon"/></button>
+                <button class="leftChoices col s6" onclick="openTab(event, 'Gallery');" > <img src="img/icon-gallery.png" class="icon"/></button>-->
+
+                <button class="leftChoices col s6 active" onclick="openTab(event, 'Details');">Details</button>
+                <button class="leftChoices col s6" onclick="openTab(event, 'Gallery');" >Gallery</button>
+            </div>
+
+            <div class=" col s12 bubbleSpeech">
+              <div class="innerLeft">
+                <div id="Details" class="tabContent">
+                  <img class="fit-in-div"
+
+                  src="img/small-tail.png" alt="small tail" />
+                </div>
+
+                <div id="Gallery" class="tabContent" style="display:none;">
+                  <script> outputImages("/img/examples/",2); </script>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col s4 offset-s1 middlepart">
+        <div class="picture">
+          <img class="fit-in-div" src="img/examples/peng-peng.png" style="float:left;width:70%;" />
+
+          <div class="caption">
+            <img src="img/pengu-arrow.png" style="width:50%;"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s1 offset-s1 rightpart">
+
+        <div class="row window">
+          <div class="windowsDetail col s12">Colors <img class="windowsCross" src="img/cross.png" onclick="tryCloseWindows();"/></div>
+          <div class="colorList col s12">
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Feathers" style="background-color:var(--feather);">#2084db</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Jacket" style="background-color:var(--jacket1);">#4df87b</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Scarf" style="background-color:var(--scarf);">#ff4949</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Bag" style="background-color:var(--bag);">#b47f2f</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Headphones" style="background-color:var(--headphones);">#757575</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Beak" style="background-color:var(--beak);">#eeff38</a>
+            <a class="colorChoice tooltipped" data-position="left" data-tooltip="Feet" style="background-color:var(--feet);">#ffde38</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="note"> Made by @Pengu1231 (2020-2021) </div>
+    </div>
+
+  <script>zz();</script> <!--Initialize functions once all elements has been loaded -->
+  </body>
+</html>

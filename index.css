@@ -1,0 +1,15 @@
+body {
+    border: 1px solid black;
+}
+
+.main-content {
+    border: 1px solid red;
+}
+
+.main-upper {
+    border: 1px solid blue;
+}
+
+.main-lower {
+    border: 1px solid green;
+}
