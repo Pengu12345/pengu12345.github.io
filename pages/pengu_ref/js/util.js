@@ -5,7 +5,7 @@ function init() {
 }
 
 function tryCloseWindows() {
-   M.toast({html: '[SYSTEM MESSAGE]: Pengu\'s flippers not recognized. Can\'t close window.'});
+   M.toast({html: '[ERROR]: Just what the heck do you think you\'re doing.'});
 }
 
 function openTab(evt, tabId) {

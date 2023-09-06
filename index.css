@@ -1,30 +1,59 @@
+:root {
+    --background: #404552;
+    --main-color-dark: #383c4a;
+    --main-color-light: #4b5162;
+    --secondary-color: #5294e2;
+    --main-color-lighter:#7c818c;
+
+    --font-color:rgba(204, 204, 204, 0.938);
+}
+
 body {
-    border: 1px solid black;
+    background-color: var(--background);
+    color:var(--font-color);
 }
 
 .main-content {
-    border: 1px solid red;
-
     height:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    display: grid;
-    place-items: center;
+    justify-content: space-around;
+
 
 }
 
 .main-upper {
-    border: 1px solid blue;
+    background-color: var(--main-color-dark);
 
-    width:100%;
+    font-size:large;
+
+    width:90%;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+
     text-align: center;
+
+    box-shadow: 5px 5px 20px 5px #33333346;
+    border-radius: 20px;
+}
+
+.icon {
+    max-width: 100px;
 }
 
 .main-lower {
-    border: 1px solid green;
+    background-color: var(--main-color-light);
 
     text-align: center;
     width: 80%;
-    height: 80%;
+    height: 300px;
 
     padding-top: 10;
     padding-bottom: 10px;
@@ -33,26 +62,64 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
 
+    box-shadow: 5px 5px 20px 5px #33333346;
+    border-radius: 20px;
+    border: 2px solid var(--main-color-dark)
 }
 
 .info-tab {
-    border: 1px solid black;
+    border-bottom: 2px solid var(--main-color-dark);
+    
+    padding:10px;
+    
     height: 90%;
+
+    font-size: larger;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-tab button {
+    max-width: fit-content;
 }
 
 .media-tab {
-    border:1px solid black;
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: center;
 }
 
-.media-tab span {
+.media-tab .logo-link {
     width:50px;
     height: 50px;
 
-    border: 1px solid red;
-
+    display: grid;
+    align-items: center;
     margin: 10px;
+}
+
+.media-tab .logo-link img {
+
+    display: block;
+    width: auto;
+    height: auto;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    image-rendering: auto;
+}
+
+footer {
+    text-align: center;
+}
+
+.footer-text {
+    font-style: italic;
+    font-size: small;
+    color:rosybrown
 }
