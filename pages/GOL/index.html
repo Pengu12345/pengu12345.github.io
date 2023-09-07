@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    </head>
+
+    <body>
+        <div class="main-container">
+
+            <h1>Conway's Game Of Life</h1>
+
+            <canvas id="board_display" width=500 height=500 >
+    
+            </canvas>
+            
+            <div class="button-set">
+                <Button onclick="fill_random()">Fill cells randomly</Button>
+            </div>
+
+            <div class="button-set">
+                <Button onclick="simulate_one()">One step</Button>
+                <Button onclick="start_simulation()"> Start simulation</Button>
+                <Button onclick="stop_simulation()"> Stop simulation</Button>
+            </div>
+
+        </div>
+    </body>
+
+    <script src="./Board.js"></script>
+    <script src="./display.js"></script>
+</html>

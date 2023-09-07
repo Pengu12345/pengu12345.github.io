@@ -1,0 +1,25 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.button-set {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+
+    flex-grow: 2;
+}
+
+.button-set Button {
+    margin: 5px;
+}
+
+canvas {    
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;        
+}
