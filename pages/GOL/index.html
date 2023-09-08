@@ -9,12 +9,27 @@
 
             <h1>Conway's Game Of Life</h1>
 
+            <span>Use the mouse to add / remove cells!</span>
+
             <canvas id="board_display" width=500 height=500 >
     
             </canvas>
             
             <div class="button-set">
+                <div>
+                    Simulation speed: <span id="speed_display_value">100 ms</span>
+                    <input type="range" name="speed_slider" id="speed_slider" min="1" max="500">
+                </div>
+
+                <div>
+                    Board size: <span id="board_size_display_value">50</span>
+                    <input type="range" name="board_size_slider" id="board_size_slider" min="5" max="200" step="5" value="50">
+                </div>
+            </div>
+
+            <div class="button-set">
                 <Button onclick="fill_random()">Fill cells randomly</Button>
+                <Button onclick="reset_board()">Empty board</Button>
             </div>
 
             <div class="button-set">
@@ -25,7 +40,49 @@
 
         </div>
     </body>
-
     <script src="./Board.js"></script>
     <script src="./display.js"></script>
+
+    <script>
+        // Speed slider
+        let speed_slider = document.getElementById("speed_slider");
+        speed_slider.value = sim_speed;
+
+        speed_slider.addEventListener("input", _ => {
+            change_speed(speed_slider.value);
+            document.getElementById("speed_display_value").textContent = speed_slider.value + " ms";
+        });
+
+        // Board size slider
+        let board_size_slider = document.getElementById("board_size_slider");
+        board_size_slider.value = board.get_size();
+
+        // In real time preview
+        board_size_slider.addEventListener("input", _ => {
+            document.getElementById("board_size_display_value").textContent = board_size_slider.value;
+        });
+
+        // On actual end of change
+        board_size_slider.addEventListener("change", _ => {
+            resize(board_size_slider.value);
+        });
+
+        // Mouse click
+        let board_display = document.getElementById("board_display");
+        board_display.addEventListener("mousedown", e => {
+
+            let size = board.get_size();
+            let rect = board_display.getBoundingClientRect();
+
+            let cell_w = canvas.getAttribute("width") / size;
+            let cell_h = canvas.getAttribute("height") / size;
+
+            let cell_y = Math.floor((e.y - rect.top) / cell_h);
+            let cell_x = Math.floor((e.x - rect.left) / cell_w);
+
+            flip_cell(cell_x,cell_y);
+            update_visuals();
+        });
+        
+    </script>
 </html>

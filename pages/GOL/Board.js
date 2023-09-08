@@ -5,8 +5,10 @@ function getRandomInt(max) {
 class Board {
     constructor(size) {
 
+        this.board_size = size;
+
         // We add 2 more rows and colums on the sides to simulate virtual bounds (Easier checks)
-        let true_size = size + 2;
+        let true_size = this.board_size + 2;
 
         this.current_state = new Array(true_size);
         this.next_state = new Array(true_size);
@@ -16,11 +18,11 @@ class Board {
             this.current_state[i] = new Array(true_size);
             this.next_state[i] = new Array(true_size);
         }
-
+        
         this.reset();
     }
 
-    get_size() {return this.current_state.length - 2;}
+    get_size() {return this.board_size;}
 
     reset() {
         for(let i=0; i<this.current_state.length; i++)
